@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>This class finds the value of the Number raised to the Power</p>
+		<!-- Call to the calculate power function -->
+		<button onclick="calculatePower()">Click to find power</button>
+		<!-- Print the value of result. -->
+		<p id="demo"></p>
+		<!-- Javascript function. -->
+		<script>
+			function calculatePower() {
+				// Get the values of base and power from user
+				var baseValue = prompt("Please enter base value : ", "Integer");
+				var powerValue = prompt("Please enter power value : ", "Integer");
+				
+				// validate inputs. 
+				if(isNaN(baseValue) ||  isNaN(powerValue)){
+					document.write(" Invalid input, Try again <br/>");
+				} else{
+					var i, sum = 1; // Define temporary variables
+					for (i=0;i<powerValue;i++) { //loops power value times
+						sum = sum * baseValue; 
+					}
+					// Print the result.					
+					document.getElementById("demo").innerHTML = "Power of the inserted number is : " + sum;
+				}
+			}
+		</script>
+	</body>
+</html>
